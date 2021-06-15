@@ -15,6 +15,7 @@ Teste de impressão das frutas no Console
 
 *** Keywords ***
 Imprimir os dados pessoais
+    Log Dictionary    ${PESSOA}
     Log To Console    ${\n}
     Log To Console    Nome: ${PESSOA.nome} ${PESSOA.sobrenome}
     Log To Console    Cidade: ${PESSOA.cidade}
@@ -25,6 +26,7 @@ Imprimir os dados pessoais
     Log To Console    ${\n}
 
 Imprimir as frutas
+    Log List          ${FRUTAS}
     Log To Console    ${\n}
     Log To Console    ${FRUTAS}[3] 
     Log To Console    ${FRUTAS}[0] 
