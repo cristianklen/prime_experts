@@ -16,21 +16,25 @@ Teste de impressão das frutas no Console
 *** Keywords ***
 Imprimir os dados pessoais
     Log Dictionary    ${PESSOA}
+    ${keys} =	Get Dictionary Keys	${PESSOA}    sort_keys=False
     Log To Console    ${\n}
-    Log To Console    Nome: ${PESSOA.nome} ${PESSOA.sobrenome}
-    Log To Console    Cidade: ${PESSOA.cidade}
-    Log To Console    e-mail: ${PESSOA.email}
-    Log To Console    LinkedIn: ${PESSOA.linkedin}
-    Log To Console    GitHub: ${PESSOA.github}
-    Log To Console    Twitter: ${PESSOA.twitter}    
+    Log To Console    ${keys}[0]: ${PESSOA.${keys[0]}}
+    Log To Console    ${keys}[1]: ${PESSOA.${keys}[1]}
+    Log To Console    ${keys}[2]: ${PESSOA.${keys}[2]}
+    Log To Console    ${keys}[3]: ${PESSOA.${keys}[3]}
+    Log To Console    ${keys}[4]: ${PESSOA.${keys}[4]}
+    Log To Console    ${keys}[5]: ${PESSOA.${keys}[5]}
+    Log To Console    ${keys}[6]: ${PESSOA.${keys}[6]}    
     Log To Console    ${\n}
+
 
 Imprimir as frutas
     Log List          ${FRUTAS}
     Log To Console    ${\n}
-    Log To Console    ${FRUTAS}[3] 
+    Sort List         ${FRUTAS}
     Log To Console    ${FRUTAS}[0] 
-    Log To Console    ${FRUTAS}[1]
-    Log To Console    ${FRUTAS}[2] 
+    Log To Console    ${FRUTAS}[1] 
+    Log To Console    ${FRUTAS}[2]
+    Log To Console    ${FRUTAS}[3] 
     Log To Console    ${FRUTAS}[4] 
     Log To Console    ${\n}
