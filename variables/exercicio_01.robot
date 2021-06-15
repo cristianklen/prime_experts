@@ -16,27 +16,20 @@ Teste de impressão das frutas no Console
 *** Keywords ***
 Imprimir os dados pessoais
     Log Dictionary    ${PESSOA}
-    ${keys} =	Get Dictionary Keys    ${PESSOA}    sort_keys=False
-    ${values} =	Get Dictionary Values   ${PESSOA}    sort_keys=False
-    
-    Log To Console    ${\n}
-    Log To Console    ${keys}[0]: ${values}[0]
-    Log To Console    ${keys}[1]: ${values}[1]
-    Log To Console    ${keys}[2]: ${values}[2]
-    Log To Console    ${keys}[3]: ${values}[3]
-    Log To Console    ${keys}[4]: ${values}[4]
-    Log To Console    ${keys}[5]: ${values}[5]
-    Log To Console    ${keys}[6]: ${values}[6]    
+
+    Log To Console    ${\n} 
+    FOR    ${key}    IN    @{PESSOA.keys()}
+        Log To Console    ${key}: ${PESSOA["${key}"]}        
+    END
     Log To Console    ${\n}
 
 
 Imprimir as frutas
     Log List          ${FRUTAS}
-    Log To Console    ${\n}
+
     Sort List         ${FRUTAS}
-    Log To Console    ${FRUTAS}[0] 
-    Log To Console    ${FRUTAS}[1] 
-    Log To Console    ${FRUTAS}[2]
-    Log To Console    ${FRUTAS}[3] 
-    Log To Console    ${FRUTAS}[4] 
+    Log To Console    ${\n}
+    FOR    ${INDEX}   ${FRUTA}    IN ENUMERATE  @{FRUTAS}
+        Log To Console    ${INDEX}: ${FRUTA}    
+    END
     Log To Console    ${\n}
