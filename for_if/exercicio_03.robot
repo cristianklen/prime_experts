@@ -1,10 +1,10 @@
 *** Settings ***
 Library          Collections
-Documentation    Exercício sobre Loop FOR
+Documentation    Exercício sobre o uso de estruturas de repetição usando FOR e estruturas condicionais usando IF-ELSE
 
 *** Variables ***
 ${LIMITE}=    5
-@{PAISES}=    Germany    France    Spain    Italy    Portugal    Brazil
+@{PAISES}=    Alemanha    França    Espanha    Itália    Portugal    Brasil
 
 *** Test Cases ***
 Teste de Looping FOR para contagem    
@@ -30,10 +30,10 @@ Imprimir a Lista de Países
     Sort List         ${PAISES}
     Log To Console    ${\n}
     FOR    ${pais}    IN    @{PAISES}
-        IF    "${pais}" == "Brazil"
+        IF    "${pais}" == "Brasil"
             Log To Console    ${pais}, a Colônia
         ELSE IF    "${pais}" == "Portugal"
-            Log To Console    ${pais}, a Metrópolis
+            Log To Console    ${pais}, a Metrópole
         ELSE
             Log To Console    ${pais}    
         END
