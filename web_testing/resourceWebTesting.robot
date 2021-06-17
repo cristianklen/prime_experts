@@ -80,9 +80,9 @@ Preencher os dados obrigatórios
     Select Checkbox                  xpath=//input[@id='newsletter' or @name='newsletter']
     #Receive special offers from our partners!
     #First name *
-    Input Text                       xpath=//input[@id='firstname' or @name='firstname']                          Fulano
+    #Input Text                       xpath=//input[@id='firstname' or @name='firstname']                          Fulano
     #Last name *
-    Input Text                       xpath=//input[@id='lastname' or @name='lastname']                            de Tal
+    #Input Text                       xpath=//input[@id='lastname' or @name='lastname']                            de Tal
     #Company
     Input Text                       xpath=//input[@id='company' or @name='company']                              Microsoft Redmond Woods Campus
     #Address *
