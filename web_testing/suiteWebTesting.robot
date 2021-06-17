@@ -2,7 +2,7 @@
 Documentation       Suíte de Teste Web - Site: http://automationpractice.com    
 Resource            resourceWebTesting.robot
 Suite Setup         Abrir o Navegador      
-##Suite Teardown      Fechar o Navegador
+Suite Teardown      Fechar o Navegador
 
 *** Test Cases ***
 Caso de Teste 01: Pesquisar produto existente
@@ -12,11 +12,13 @@ Caso de Teste 01: Pesquisar produto existente
     Conferir se o produto "Blouse" foi listado no site
     Adicionar o produro "Blouse" no carrinho
     Conferir se o produto "Blouse" foi adicionado ao carrinho    
+
 Caso de Teste 02: Pesquisar produto não existente
     Acessar a página home do site Automation Practice
     Digitar o nome do produto "itemNãoExistente" no campo de pesquisa
     Clicar no botão pesquisar
     Conferir mensagem "No results were found for your search "itemNãoExistente""
+
 Caso de Teste 03: Listar Produtos
     Acessar a página home do site Automation Practice
     Passar o mouse por cima da categoria "Women" no menu principal superior de categorias
@@ -31,4 +33,3 @@ Caso de Teste 04: Adicionar Cliente
     Preencher os dados obrigatórios
     Submeter cadastro
     Conferir se o cadastro foi efetuado com sucesso
-  
