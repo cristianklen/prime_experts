@@ -1,0 +1,21 @@
+AUTH= {
+    "botao_criar_conta":                "css=div.submit > button",
+    "radio_titulo_mr":                  "css=input#id_gender1",
+    "input_email":                      "css=input#email_create",
+    "input_nome":                       "css=input#customer_firstname",
+    "input_sobrenome":                  "css=input#customer_lastname",
+    "input_senha":                      "css=input#passwd",
+    "combo_dia_nascimento":             "css=select#days",
+    "combo_mes_nascimento":             "css=select#months",
+    "combo_ano_nascimento":             "css=select#years",
+    "checkbox_newsletter":              "css=input#newsletter",
+    "input_empresa":                    "css=input#company",
+    "input_endereco_1":                 "css=input#address1",
+    "input_endereco_2":                 "css=input#address2",
+    "input_cidade":                     "css=input#city",
+    "combo_estado":                     "css=select#id_state",
+    "input_cep":                        "css=input#postcode",   
+    "input_telefone":                   "css=input#phone",    
+    "input_celular":                    "css=input#phone_mobile",
+    "botao_registrar":                  "css=button#submitAccount"
+}
